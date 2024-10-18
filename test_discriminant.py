@@ -46,7 +46,14 @@ class TestCalculateDiscriminant(unittest.TestCase):
 
     def test_small_coefficients(self):
         self.assertEqual(calculate_discriminant(0.001, 0.002, 0.001), 0.0)
-        self.assertEqual(calculate_discriminant(0.001, 0.002, 0.0005), 0.000002)
+        self.assertEqual(calculate_discriminant
+                         (0.001, 0.002, 0.0005), 0.000002)
+
+    def test(self):
+        self.assertEqual(calculate_discriminant(1, 2, 3), 0)
+
+    def tesst(self):
+        self.assertEqual(calculate_discriminant(5, 6, 1), 0)
 
 
 if __name__ == "__main__":
