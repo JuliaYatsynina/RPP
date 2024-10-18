@@ -46,6 +46,9 @@ class TestCalculateDiscriminant(unittest.TestCase):
         self.assertEqual(calculate_discriminant(6, 1, 4), -95)
         self.assertEqual(calculate_discriminant(-1, 1, -4), -15)
         self.assertEqual(calculate_discriminant(8, -1, 7), -223)
+        self.assertEqual(calculate_discriminant(8, 2, 6), -188)
+        self.assertEqual(calculate_discriminant(-7, -1, -7), -195)
+        self.assertEqual(calculate_discriminant(2, 2, 2), -12)
 
 
 if __name__ == "__main__":
