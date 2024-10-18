@@ -147,7 +147,7 @@ jobs:
         run: |
           TOKEN=${{ secrets.BOT_TOKEN }}
           CHAT_ID=${{ secrets.CHAT_ID }}
-          if [ "${{ job.status }}" == "success" ]; then
+          if [ "${{ needs.status }}" == "success" ]; then
             MESSAGE="CI/CD Pipeline завершен успешно!"
           else
             MESSAGE="CI/CD Pipeline завершен с ошибкой."
