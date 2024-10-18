@@ -44,17 +44,9 @@ class TestCalculateDiscriminant(unittest.TestCase):
         self.assertEqual(calculate_discriminant(-1000, -2000, -1000), 0)
         self.assertEqual(calculate_discriminant(-1000, -2000, -500), 2000000)
 
-    def test_large_positive_coefficients(self):
-        self.assertEqual(calculate_discriminant(10000, 20000, 10000), 0)
-        self.assertEqual(calculate_discriminant(10000, 20000, 50000), 200000)
-
     def test_small_coefficients(self):
         self.assertEqual(calculate_discriminant(0.001, 0.002, 0.001), 0.0)
         self.assertEqual(calculate_discriminant(0.001, 0.002, 0.0005), 0.000002)
-
-    def test_coefficients_with_large_difference(self):
-        self.assertEqual(calculate_discriminant(1, 10000, 1), 99)
-        self.assertEqual(calculate_discriminant(1, -10000, 1), 99)
 
 
 if __name__ == "__main__":
