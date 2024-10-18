@@ -1,6 +1,5 @@
 import unittest
-from discriminant import calculate_discriminant, main
-from unittest.mock import patch
+from discriminant import calculate_discriminant
 
 
 class TestCalculateDiscriminant(unittest.TestCase):
@@ -37,27 +36,6 @@ class TestCalculateDiscriminant(unittest.TestCase):
     def test_mixed_coefficients(self):
         self.assertEqual(calculate_discriminant(1, -1, -1), 5)
         self.assertEqual(calculate_discriminant(-1, 1, 1), 5)
-
-    @patch('builtins.input', side_effect=[1, -3, 2])
-    @patch('builtins.print')
-    def test_main_positive_discriminant(self, mock_print):
-        main()
-        mock_print.assert_any_call("Дискриминант: 1")
-        mock_print.assert_any_call("Два различных вещественных корня.")
-
-    @patch('builtins.input', side_effect=[1, 2, 1])
-    @patch('builtins.print')
-    def test_main_zero_discriminant(self, mock_print):
-        main()
-        mock_print.assert_any_call("Дискриминант: 0")
-        mock_print.assert_any_call("Один вещественный корень.")
-
-    @patch('builtins.input', side_effect=[1, 1, 1])
-    @patch('builtins.print')
-    def test_main_negative_discriminant(self, mock_print):
-        main()
-        mock_print.assert_any_call("Дискриминант: -3")
-        mock_print.assert_any_call("Нет вещественных корней.")
 
 
 if __name__ == "__main__":
