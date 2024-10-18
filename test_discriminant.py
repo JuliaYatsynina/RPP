@@ -21,8 +21,13 @@ class TestCalculateDiscriminant(unittest.TestCase):
         self.assertEqual(calculate_discriminant(0, 6, 7), 36)
         self.assertEqual(calculate_discriminant(1, 5, -4), 41)
         self.assertEqual(calculate_discriminant(7, -3, -7), 205)
-        self.assertEqual(calculate_discriminant(6, -1, -4), 97)
+        self.assertEqual(calculate_discriminant(6, -1, 4), 97)
         self.assertEqual(calculate_discriminant(5, 6, 1), 16)
+        self.assertEqual(calculate_discriminant(0, 2, 0), 4)
+        self.assertEqual(calculate_discriminant(0, 1, 7), 29)
+        self.assertEqual(calculate_discriminant(-1, 1, -4), 17)
+        self.assertEqual(calculate_discriminant(8, -1, 7), 225)
+        self.assertEqual(calculate_discriminant(5, 6, 0), 36)
 
     def test_zero_discriminant(self):
         self.assertEqual(calculate_discriminant(1, 2, 1), 0)
@@ -40,6 +45,7 @@ class TestCalculateDiscriminant(unittest.TestCase):
         self.assertEqual(calculate_discriminant(1, 0, 1), -4)
         self.assertEqual(calculate_discriminant(1, 2, 3), -8)
         self.assertEqual(calculate_discriminant(77, 3, 7), -2147)
+        self.assertEqual(calculate_discriminant(6, 1, -4), -97)
 
 
 if __name__ == "__main__":
