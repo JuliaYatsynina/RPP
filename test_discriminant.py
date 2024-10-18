@@ -20,7 +20,7 @@ class TestCalculateDiscriminant(unittest.TestCase):
 
     def test_small_numbers(self):
         self.assertEqual(calculate_discriminant(0.1, 0.2, 0.1), 0.0)
-        self.assertEqual(calculate_discriminant(0.1, 0.2, 0.05), 0.0375)
+        self.assertEqual(calculate_discriminant(0.1, 0.2, 0.05), 0.02)
 
     def test_negative_coefficients(self):
         self.assertEqual(calculate_discriminant(-1, -3, -2), 1)
@@ -33,7 +33,7 @@ class TestCalculateDiscriminant(unittest.TestCase):
 
     def test_mixed_coefficients(self):
         self.assertEqual(calculate_discriminant(1, -1, -1), 5)
-        self.assertEqual(calculate_discriminant(-1, 1, 1), -3)
+        self.assertEqual(calculate_discriminant(-1, 1, 1), 5)
 
 
 if __name__ == "__main__":
