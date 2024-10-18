@@ -65,6 +65,12 @@ class TestCalculateDiscriminant(unittest.TestCase):
     def test_coef(self):
         self.assertEqual(calculate_discriminant(77, 3, 7), -2147)
 
+    def tests_coefficients(self):
+        self.assertEqual(calculate_discriminant(1, 5, -4), 36)
+
+    def tests_coef(self):
+        self.assertEqual(calculate_discriminant(7, -3, -7), -2147)
+
 
 if __name__ == "__main__":
     unittest.main()
