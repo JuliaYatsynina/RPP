@@ -4,7 +4,6 @@ def calculate_discriminant(a, b, c):
     """
     return b ** 2 - 4 * a * c
 
-
 def main():
     print("Введите коэффициенты квадратного уравнения ax^2 + bx + c = 0:")
     a = float(input("a: "))
@@ -20,7 +19,6 @@ def main():
         print("Один вещественный корень.")
     else:
         print("Нет вещественных корней.")
-
 
 if __name__ == "__main__":
     main()

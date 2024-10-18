@@ -1,17 +1,17 @@
-import pytest
+import unittest
 from discriminant import calculate_discriminant
 
+class TestCalculateDiscriminant(unittest.TestCase):
+    def test_positive_discriminant(self):
+        self.assertEqual(calculate_discriminant(1, -3, 2), 1)
+        self.assertEqual(calculate_discriminant(1, 0, -4), 16)
 
-def test_calculate_discriminant():
-    # Положительные тесты
-    assert calculate_discriminant(1, -3, 2) == 1, "Test case 1 failed"
-    assert calculate_discriminant(1, 0, -4) == 16, "Test case 2 failed"
-    assert calculate_discriminant(1, 2, 1) == 0, "Test case 3 failed"
+    def test_zero_discriminant(self):
+        self.assertEqual(calculate_discriminant(1, 2, 1), 0)
 
-    # Негативные тесты
-    assert calculate_discriminant(1, 1, 1) == -3, "Test case 4 failed"
-    assert calculate_discriminant(1, 0, 1) == -4, "Test case 5 failed"
-
+    def test_negative_discriminant(self):
+        self.assertEqual(calculate_discriminant(1, 1, 1), -3)
+        self.assertEqual(calculate_discriminant(1, 0, 1), -4)
 
 if __name__ == "__main__":
-    pytest.main()
+    unittest.main()
