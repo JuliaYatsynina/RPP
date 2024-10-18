@@ -19,8 +19,8 @@ class TestCalculateDiscriminant(unittest.TestCase):
         self.assertEqual(calculate_discriminant(1000, 2000, 500), 2000000)
 
     def test_small_numbers(self):
-        self.assertEqual(calculate_discriminant(0.1, 0.2, 0.1), 0.0)
-        self.assertEqual(calculate_discriminant(0.1, 0.2, 0.05), 0.02)
+        self.assertAlmostEqual(calculate_discriminant(0.1, 0.2, 0.1), 0.0, places=7)
+        self.assertAlmostEqual(calculate_discriminant(0.1, 0.2, 0.05), 0.02, places=7)
 
     def test_negative_coefficients(self):
         self.assertEqual(calculate_discriminant(-1, -3, -2), 1)
