@@ -50,7 +50,7 @@ class TestCalculateDiscriminant(unittest.TestCase):
                          (0.001, 0.002, 0.0005), 0.000002)
 
     def test(self):
-        self.assertEqual(calculate_discriminant(1, 2, 3), 0)
+        self.assertEqual(calculate_discriminant(1, 2, 3), -8)
 
     def tesst(self):
         self.assertEqual(calculate_discriminant(5, 6, 1), 0)
