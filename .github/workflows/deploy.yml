@@ -140,7 +140,7 @@ jobs:
 
   notify:
     runs-on: ubuntu-latest
-    needs: [test]
+    needs: [test, lint, security, coverage]
     if: always()
     steps:
       - name: Send Telegram notification
