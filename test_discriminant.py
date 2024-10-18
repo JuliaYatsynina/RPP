@@ -6,71 +6,40 @@ class TestCalculateDiscriminant(unittest.TestCase):
     def test_positive_discriminant(self):
         self.assertEqual(calculate_discriminant(1, -3, 2), 1)
         self.assertEqual(calculate_discriminant(1, 0, -4), 16)
+        self.assertEqual(calculate_discriminant(1000, 2000, 500), 2000000)
+        self.assertAlmostEqual(
+            calculate_discriminant(0.1, 0.2, 0.05), 0.02, places=7)
+        self.assertEqual(calculate_discriminant(-1, -3, -2), 1)
+        self.assertEqual(calculate_discriminant(-1, -3, -1), 5)
+        self.assertEqual(calculate_discriminant(0, 1, 0), 1)
+        self.assertEqual(calculate_discriminant(1, -1, -1), 5)
+        self.assertEqual(calculate_discriminant(-1, 1, 1), 5)
+        self.assertEqual(calculate_discriminant(-1000, -2000, -500), 2000000)
+        self.assertEqual(calculate_discriminant
+                         (0.001, 0.002, 0.0005), 0.000002)
+        self.assertEqual(calculate_discriminant(0, 3, 0), 9)
+        self.assertEqual(calculate_discriminant(0, 6, 7), 36)
+        self.assertEqual(calculate_discriminant(1, 5, -4), 41)
+        self.assertEqual(calculate_discriminant(7, -3, -7), 205)
+        self.assertEqual(calculate_discriminant(6, -1, -4), 97)
 
     def test_zero_discriminant(self):
         self.assertEqual(calculate_discriminant(1, 2, 1), 0)
+        self.assertEqual(calculate_discriminant(1000, 2000, 1000), 0)
+        self.assertAlmostEqual(
+            calculate_discriminant(0.1, 0.2, 0.1), 0.0, places=7)
+        self.assertEqual(calculate_discriminant(0, 0, 0), 0)
+        self.assertEqual(calculate_discriminant(0, 0, 1), 0)
+        self.assertEqual(calculate_discriminant(-1000, -2000, -1000), 0)
+        self.assertEqual(calculate_discriminant(0.001, 0.002, 0.001), 0.0)
+        self.assertEqual(calculate_discriminant(5, 6, 1), 0)
+        self.assertEqual(calculate_discriminant(0, 0, 3), 0)
 
     def test_negative_discriminant(self):
         self.assertEqual(calculate_discriminant(1, 1, 1), -3)
         self.assertEqual(calculate_discriminant(1, 0, 1), -4)
-
-    def test_large_numbers(self):
-        self.assertEqual(calculate_discriminant(1000, 2000, 1000), 0)
-        self.assertEqual(calculate_discriminant(1000, 2000, 500), 2000000)
-
-    def test_small_numbers(self):
-        self.assertAlmostEqual(
-            calculate_discriminant(0.1, 0.2, 0.1), 0.0, places=7)
-        self.assertAlmostEqual(
-            calculate_discriminant(0.1, 0.2, 0.05), 0.02, places=7)
-
-    def test_negative_coefficients(self):
-        self.assertEqual(calculate_discriminant(-1, -3, -2), 1)
-        self.assertEqual(calculate_discriminant(-1, -3, -1), 5)
-
-    def test_zero_coefficients(self):
-        self.assertEqual(calculate_discriminant(0, 0, 0), 0)
-        self.assertEqual(calculate_discriminant(0, 1, 0), 1)
-        self.assertEqual(calculate_discriminant(0, 0, 1), 0)
-
-    def test_mixed_coefficients(self):
-        self.assertEqual(calculate_discriminant(1, -1, -1), 5)
-        self.assertEqual(calculate_discriminant(-1, 1, 1), 5)
-
-    def test_all_zero_coefficients(self):
-        self.assertEqual(calculate_discriminant(0, 0, 0), 0)
-
-    def test_large_negative_coefficients(self):
-        self.assertEqual(calculate_discriminant(-1000, -2000, -1000), 0)
-        self.assertEqual(calculate_discriminant(-1000, -2000, -500), 2000000)
-
-    def test_small_coefficients(self):
-        self.assertEqual(calculate_discriminant(0.001, 0.002, 0.001), 0.0)
-        self.assertEqual(calculate_discriminant
-                         (0.001, 0.002, 0.0005), 0.000002)
-
-    def test(self):
         self.assertEqual(calculate_discriminant(1, 2, 3), -8)
-
-    def tesst(self):
-        self.assertEqual(calculate_discriminant(5, 6, 1), 0)
-
-    def test_zero_and_large_coefficients(self):
-        self.assertEqual(calculate_discriminant(0, 3, 0), 9)
-        self.assertEqual(calculate_discriminant(0, 0, 3), 0)
-
-    def test_coefficients(self):
-        self.assertEqual(calculate_discriminant(0, 6, 7), 36)
-
-    def test_coef(self):
         self.assertEqual(calculate_discriminant(77, 3, 7), -2147)
-
-    def tests_coefficients(self):
-        self.assertEqual(calculate_discriminant(1, 5, -4), 41)
-
-    def tests_coef(self):
-        self.assertEqual(calculate_discriminant(7, -3, -7), 205)
-        self.assertEqual(calculate_discriminant(6, -1, -4), 97)
 
 
 if __name__ == "__main__":
