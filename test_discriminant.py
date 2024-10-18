@@ -26,6 +26,15 @@ class TestCalculateDiscriminant(unittest.TestCase):
         self.assertEqual(calculate_discriminant(-1, -3, -2), 1)
         self.assertEqual(calculate_discriminant(-1, -3, -1), 5)
 
+    def test_zero_coefficients(self):
+        self.assertEqual(calculate_discriminant(0, 0, 0), 0)
+        self.assertEqual(calculate_discriminant(0, 1, 0), 1)
+        self.assertEqual(calculate_discriminant(0, 0, 1), -4)
+
+    def test_mixed_coefficients(self):
+        self.assertEqual(calculate_discriminant(1, -1, -1), 6)
+        self.assertEqual(calculate_discriminant(-1, 1, 1), -3)
+
 
 if __name__ == "__main__":
     unittest.main()
