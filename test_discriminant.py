@@ -24,7 +24,7 @@ class TestCalculateDiscriminant(unittest.TestCase):
         self.assertEqual(calculate_discriminant(6, -1, -4), 97)
         self.assertEqual(calculate_discriminant(5, 6, 1), 16)
         self.assertEqual(calculate_discriminant(0, 2, 0), 4)
-        self.assertEqual(calculate_discriminant(0, 1, 7), 29)
+        self.assertEqual(calculate_discriminant(0, 1, 7), 1)
         self.assertEqual(calculate_discriminant(-1, 1, -4), 17)
         self.assertEqual(calculate_discriminant(8, -1, 7), 225)
         self.assertEqual(calculate_discriminant(5, 6, 0), 36)
