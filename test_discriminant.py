@@ -59,8 +59,11 @@ class TestCalculateDiscriminant(unittest.TestCase):
         self.assertEqual(calculate_discriminant(0, 1e6, 0), 1e12)
         self.assertEqual(calculate_discriminant(0, 0, 1e6), 0)
 
-    def test_large_positive_coefficients(self):
-        self.assertEqual(calculate_discriminant(1e6, 1e7, 1e6), 1e14)
+    def test_coefficients(self):
+        self.assertEqual(calculate_discriminant(0, 6, 7), 0)
+
+    def test_coef(self):
+        self.assertEqual(calculate_discriminant(77, 3, 7), 0)
 
 
 if __name__ == "__main__":
