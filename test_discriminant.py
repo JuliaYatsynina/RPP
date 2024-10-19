@@ -35,7 +35,7 @@ class TestCalculateDiscriminant(unittest.TestCase):
         self.assertEqual(calculate_discriminant(0, 0, 0), 0)
         self.assertEqual(calculate_discriminant(0, 0, 1), 0)
         self.assertEqual(calculate_discriminant(-1000, -2000, -1000), 0)
-        self.assertEqual(calculate_discriminant(0.001, 0.002, 0.001), 0.0)
+        self.assertEqual(calculate_discriminant(0.001, 0.002, 0.001), 0)
         self.assertEqual(calculate_discriminant(0, 0, 3), 0)
 
     def test_negative_discriminant(self):
