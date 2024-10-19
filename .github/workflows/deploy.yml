@@ -15,16 +15,7 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-      
-      - name: Print current working directory
-        run: pwd
-      
-      - name: List files in the root directory
-        run: ls -la
-      
-      - name: List files in the workflows directory
-        run: ls -la .github/workflows/
-      
+
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
@@ -43,16 +34,7 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-      
-      - name: Print current working directory
-        run: pwd
-      
-      - name: List files in the root directory
-        run: ls -la
-      
-      - name: List files in the workflows directory
-        run: ls -la .github/workflows/
-      
+
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
@@ -76,16 +58,7 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-      
-      - name: Print current working directory
-        run: pwd
-      
-      - name: List files in the root directory
-        run: ls -la
-      
-      - name: List files in the workflows directory
-        run: ls -la .github/workflows/
-      
+
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
@@ -113,15 +86,6 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-      
-      - name: Print current working directory
-        run: pwd
-      
-      - name: List files in the root directory
-        run: ls -la
-      
-      - name: List files in the workflows directory
-        run: ls -la .github/workflows/
       
       - name: Set up Python
         uses: actions/setup-python@v2
